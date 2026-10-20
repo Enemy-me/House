@@ -1,4 +1,28 @@
 
-body{
-  color: red;
+
+@use "normilise";
+@use "globals";
+@use "fonts";
+
+
+@use "header";
+@use "main";
+
+
+body
+{
+
+  background-color: var(--background-osn);
+  color: var(--color-dark);
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-base);
+
+  transition-duration: var(--transition-duration);
+
+  scroll-behavior: smooth;
+
 }
+
+

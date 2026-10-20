@@ -1,0 +1,82 @@
+
+
+:root{
+
+
+  // Контейнер
+
+   --container-width: max(1100px,76.3889vw);
+   --container-padding: 20px;
+
+  // Бекграунд
+
+  --background-osn: #F4F6F5;
+  --background-secondary: #e1ede6;
+
+  // Шрифты и цвета
+
+  --font-family: Raleway, sans-serif;
+  --font-weight: 500;
+
+  --color-dark: #2C2D35;
+
+  --color-gray-green: #86928B;
+
+  --color-muted-green: #598D66;
+
+  /* Базовый размер текста */
+
+  --font-size-base:  1.25rem; // 20px
+
+  // Заголовки
+
+  --font-size-title_card: 1.875rem; // 30px
+
+  --font-size-title: 2.5rem;  // 40px
+
+  // Подзаголовки и цены
+
+  --font-size-subtitle: 1.125rem; // 18px
+
+  --font-size-price_card: 1.5rem; // 24px
+
+  // Кнопки
+
+  --padding-button: 20px 60px;
+  --font-size-button: 1.25rem;
+
+  //  Другое
+
+  --transition-duration: 0.2s;
+
+
+
+
+}
+
+
+.container
+{
+  max-width: calc(var(--container-width) + var(--container-padding) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.button
+{
+
+}
+
+
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+}
+

@@ -1,0 +1,174 @@
+
+
+.header{
+
+  display: grid;
+
+  width: 100%;
+  min-height: 100px;
+
+  background-color: var(--background-secondary);
+
+  }
+
+  .H-navigation {
+  display: grid;
+  grid-template-columns: [logo] minmax(0, 1fr) [navigation] minmax(0, 1fr);
+
+  font-weight: 500;
+  font-size: 1.25rem;
+
+   & a {
+    color: var(--color-dark);
+   }
+  }
+
+.H-logo
+ {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  color: var(--color-gray-green);
+  font-weight: 700;
+
+
+  padding-left: 11.45vw;
+
+  & a {
+    color: var(--color-gray-green);
+
+    padding-left: 0.4em;
+  }
+
+ }
+
+
+ .H-navigation__list
+ {
+  display: flex;
+
+  justify-content: end;
+  align-items: center;
+
+  flex-wrap: wrap;
+  column-gap: 3.89vw;
+
+  padding-right: 11.45vw;
+
+ }
+
+
+ @media (max-width: 1075px)
+ {
+   .H-navigation {
+     display: grid;
+     grid-template-columns: [logo] 0.5fr [navigation] 1fr;
+
+     padding-inline: 3.72vw;
+   }
+
+   .H-logo,.H-navigation__list{
+     padding-left: 0;
+     padding-right: 0;
+   }
+
+   .H-navigation__list{
+     justify-content: space-evenly;
+   }
+ }
+
+ @media (max-width: 590px)
+ {
+
+   .H-logo{
+     display: flex;
+     position: relative;
+
+     align-items: center;
+     justify-content: center;
+
+
+     &::after{
+       content: "";
+       display: inline-block;
+
+       position: absolute;
+
+       top: 100%;
+
+       bottom: 10px;
+
+       width: 100%;
+       height: 1px;
+
+       background-color: #c3d1c6;
+
+     }
+
+   }
+
+
+   .H-navigation{
+
+
+
+     display: grid;
+     grid-template-columns: 1fr ;
+
+     padding-inline: 5.6vw;
+
+
+   }
+
+
+
+   .H-navigation__list{
+
+      position: relative;
+
+      justify-content: flex-start;
+      align-items: center;
+
+       column-gap: clamp(30px,3.75rem ,60px);
+
+     .buy_cart{
+       position: absolute;
+       right: 0;
+       top: 20%;
+     }
+   }
+
+   }
+
+
+  @media (max-width: 510px)
+  {
+
+    .H-navigation{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .H-navigation__list{
+      visibility: hidden;
+      display: none;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
