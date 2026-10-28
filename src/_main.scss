@@ -1,6 +1,298 @@
 
 
-body{
-  background-color: aqua;
+@mixin CardPositioning{
+  display: flex;
+
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.875rem;
 }
 
+
+.M-Organization {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  justify-content: center;
+
+  flex-wrap: nowrap;
+
+}
+
+  .M-image_company{
+    width: 100%;
+    align-self: center;
+  }
+
+  .M-about_company{
+    display: inline-flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: start;
+
+    row-gap: 1em;
+
+  }
+
+
+  .M-title{
+
+
+    font-size: clamp(1.9rem, 1.248572759231994rem + 2.77936360085334vw, 3.75rem);
+
+    font-weight: var(--font-weight);
+
+    line-height: 1.1;
+
+  }
+
+  .M-subtitle{
+
+    font-size: clamp(0.9rem, 0.8295754334304859rem + 0.30047174063279364vw, 1.1rem);
+    line-height: 1.5;
+
+    color: var(--color-gray-green);
+  }
+
+  .M-Products{
+
+    color: var(--color-muted-green);
+    font-size: clamp(1.1rem, 1.029575433430486rem + 0.30047174063279347vw, 1.3rem);
+
+    margin-top: clamp(20px, 1.87vw , 40px);
+
+  }
+
+  @media (max-width: 608px)
+  {
+
+    .container
+    {
+      max-width: calc( 606px + var(--container-padding) * 2);
+    }
+
+  }
+
+
+
+
+.CATALOG{
+  margin-top: clamp(3.125rem, 2.693rem + 1.87vw, 4.375rem);
+
+}
+
+.container{
+  container-type: inline-size;
+  container-name: CATALOG;
+
+}
+
+
+.CAT-navigation{
+
+  display: grid;
+  align-items: end;
+
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.CAT-country{
+
+  display: flex;
+  justify-content: end;
+
+  column-gap: 2rem;
+
+}
+
+.CAT-title
+{
+  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+
+.Nation{
+
+  margin-top: clamp(1.25rem, 1.0625rem + 0.939vw, 1.875rem);
+
+  .France{
+    @include CardPositioning;
+  }
+
+  .Germany{
+    @include CardPositioning;
+  }
+
+  .England{
+    @include CardPositioning;
+  }
+
+  .M-Image_card{
+    padding-bottom: 0.625rem;
+  }
+
+  .image__subtitle{
+
+    font-size: clamp(1rem, 0.93rem + 0.188vw, 1.125rem);
+    color: var(--color-gray-green);
+
+    padding-bottom: 0.313rem;
+
+  }
+
+  .title_card{
+    font-size: clamp(1.5rem, 1.362rem + 0.563vw, 1.875rem);
+    font-weight: 500;
+
+    padding-bottom: 0.5rem;
+  }
+
+  .title__subtitle{
+    font-size: clamp(1rem, 0.93rem + 0.188vw, 1.125rem);
+    padding-bottom: 1.875rem;
+  }
+
+  .price{
+    font-size: clamp(1.25rem, 1.588rem - 0.376vw, 1.5rem);
+    padding-bottom: 1.25rem ;
+
+    color: var(--color-muted-green);
+  }
+
+  .Wideness{
+    width: 100%;
+  }
+
+}
+
+
+
+.card{
+  background: #e1ede6;
+
+
+  padding: 1.125rem;
+}
+
+
+
+.PROMO{
+
+  margin-top: clamp(3.75rem, 0.94vw + 3.53rem, 4.375rem);
+
+  width: 100%;
+  height: 574px;
+
+  background-image: url("./assets/images/Background-promo.webp");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+  .PROMO--Container{
+
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 1.25rem;
+
+    padding-left: clamp(0.9375rem, 14.08vw - 2.36rem, 10.3125rem);
+    padding-top: clamp(3.125rem, 1.88vw + 2.68rem, 4.375rem);
+
+    max-width: min(40em,50%);
+
+
+
+    .PROMO--Title{
+
+      position: relative;
+      
+     font-weight: 500;
+     font-size: clamp(1.5rem, 1.5vw + 1.15rem, 2.5rem);
+
+
+     color: var(--color-white);
+     line-height: 1.0;
+
+      &::before{
+        position: absolute;
+        content: url(../public/icons/Star2.svg);
+
+        left: -14%;
+      }
+  }
+
+  .PROMO--Core{
+    font-size: clamp(1rem, 0.19vw + 0.94rem, 1.125rem);
+    line-height: 1.5;
+
+    color: var(--color-white);
+  }
+
+  .PROMO--button{
+
+    background: var(--color-yellow);
+    color: var(--color-dark);
+
+    border-color: transparent;
+    width: 16.063rem;
+
+    margin-top: clamp(1.25rem, 1.88vw + 0.81rem, 2.5rem);
+  }
+
+  }
+
+
+}
+
+
+.OUR-TEAM{
+
+  display: flex;
+
+  column-gap: clamp(0rem, 2.82vw - 1.06rem, 1.875rem);
+  margin-top: clamp(3.75rem, 0.94vw + 3.53rem, 4.375rem);
+
+  .TEAM--Content{
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 1.25rem;
+
+    justify-content: center;
+
+    .TEAM--title{
+      font-weight: 500;
+      font-size: clamp(1.5rem, 1.5vw + 1.15rem, 2.5rem);
+
+      line-height: 1.1;
+
+    }
+
+    .TEAM--Core {
+
+      font-size: clamp(1rem, 0.19vw + 0.94rem, 1.125rem);
+      line-height: 1.5;
+
+
+    }
+
+    .TEAM--SVG_list{
+      display: flex;
+      flex-direction: row;
+
+      column-gap:  clamp(1.5625rem, 0.47vw + 1.45rem, 1.875rem);
+
+    }
+
+  }
+}

@@ -24,6 +24,10 @@
 
   --color-muted-green: #598D66;
 
+  --color-white: #f4f6f5;
+
+  --color-yellow: #EEDB6D;
+
   /* Базовый размер текста */
 
   --font-size-base:  1.25rem; // 20px
@@ -55,6 +59,8 @@
 }
 
 
+
+
 .container
 {
   max-width: calc(var(--container-width) + var(--container-padding) * 2);
@@ -62,11 +68,36 @@
   padding-inline: var(--container-padding);
 }
 
+
 .button
 {
 
+  font-size: var(--font-size-base);
+  font-weight: 500;
+
+  padding: 20px 60px;
+  border: 1px solid #598d66;
+
+  color: var(--color-muted-green);
+
 }
 
+
+.card-button{
+
+  font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+
+  padding:  0.25em 0.5em;
+  border-radius: 1em;
+
+  background-color: #d4e8d9;
+
+}
+
+.is-active{
+  background-color: #376b44;
+  color: var(--color-white)
+}
 
 
 .visually-hidden {
@@ -80,3 +111,10 @@
   clip-path: inset(100%) !important;
 }
 
+ mark{
+   color: var(--color-muted-green);
+ }
+
+  span{
+    color: var(--color-muted-green);
+  }
